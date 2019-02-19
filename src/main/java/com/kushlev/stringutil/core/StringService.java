@@ -43,7 +43,7 @@ public class StringService {
       if (substr.toCharArray()[0] == str.toCharArray()[i] && substr.length() <= str.length() - i) {
         found = true;
         for (int j = 1; j < substr.length(); j++) {
-          if (substr.toCharArray()[j] != str.toCharArray()[i+j]) {
+          if (substr.toCharArray()[j] != str.toCharArray()[i + j]) {
             found = false;
             break;
           }
