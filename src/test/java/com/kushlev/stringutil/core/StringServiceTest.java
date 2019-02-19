@@ -77,6 +77,24 @@ public class StringServiceTest {
   }
 
   @Test
+  public void givenEmptySubstringShouldReturnDefaultValue() {
+    String string = "helloworld";
+    String substring = "";
+    Integer expected = -1;
+
+    Assert.assertEquals(expected, service.getSubstringIndex(string, substring));
+  }
+
+  @Test
+  public void givenLargerSubstringThanStringShouldReturnDefaultValue() {
+    String string = "string";
+    String substring = "substring";
+    Integer expected = -1;
+
+    Assert.assertEquals(expected, service.getSubstringIndex(string, substring));
+  }
+
+  @Test
   public void givenStringWithoutSubstringShouldReturnDefaultValue() {
     String string = "helloworld";
     String substring = "jo";

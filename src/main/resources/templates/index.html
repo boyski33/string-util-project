@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>String Util Application</title>
+    <link rel="stylesheet" th:href="@{/bootstrap.css}"/>
+
+    <script
+            src="https://code.jquery.com/jquery-2.2.4.min.js"
+            integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+            crossorigin="anonymous"></script>
+    <script th:src="@{/rest-calls.js}" async="async"></script>
+</head>
+<body>
+<div class="container">
+    <form class="form-group">
+        <label>
+            String:
+            <input id="string" type="text" class="form-control"/>
+        </label>
+
+        <label>
+            Substring:
+            <input id="substring" type="text" class="form-control"/>
+        </label>
+
+        <br/>
+        <br/>
+
+        <button class="btn btn-primary" type="button" onclick="getWords()">Words</button>
+        <button class="btn btn-primary" type="button" onclick="getSymbols()">Symbols</button>
+        <button class="btn btn-primary" type="button" onclick="invert()">Invert</button>
+        <button class="btn btn-primary" type="button" onclick="getSubstringIndex()">Substring</button>
+    </form>
+
+    <div class="container">
+        <p class="font-weight-bold" style="font-size: 2em">
+            Result: <span id="result"></span>
+        </p>
+    </div>
+</div>
+
+</body>
+</html>

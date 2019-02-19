@@ -34,6 +34,10 @@ public class StringService {
   }
 
   public Integer getSubstringIndex(String str, String substr) {
+    if (substr.isEmpty()) {
+      return -1;
+    }
+
     boolean found;
     for (int i = 0; i < str.length(); i++) {
       if (substr.toCharArray()[0] == str.toCharArray()[i] && substr.length() <= str.length() - i) {
